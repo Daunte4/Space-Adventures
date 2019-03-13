@@ -10,6 +10,7 @@ namespace SpaceAdventures
     {
         static void Main(string[] args)
         {
+            new App().Run();
         }
     }
 }
