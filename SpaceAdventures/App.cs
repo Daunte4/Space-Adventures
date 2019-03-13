@@ -19,84 +19,20 @@ namespace SpaceAdventures
             CompellingStory();
 
         }
+        
+        private void CharacterFeatures()
+        {
+            Character testCharacter = new Character();
+        }
+
+        private void Name()
+        {
+            Character testCharacter = new Character();
+        }
 
         private void StartGame()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("==============================================================================");
-            Console.WriteLine("        Welcome to the one and only Space Adventures.");
-            Console.WriteLine("==============================================================================");
-            Console.ResetColor();
-        }
-
-        private string Name()
-        {
-                string name = "";
-                
-
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write("Type in your name to start the game: ");
-                Console.ResetColor();
-
-            name = ($"{Console.ReadLine()}");
-            return name;
-            
-        }
-
-        private void CharacterFeatures()
-        {
-            Console.WriteLine("Enter the appropriate numbers below.");
-            Console.ForegroundColor = ConsoleColor.Green;
-
-            Console.WriteLine("Are you a" + " 1.Male " + " 2.Female");
-                   int Choice = int.Parse(Console.ReadLine());
-            if (Choice == 1)
-            {
-
-            }
-            else if (Choice == 2)
-            {
-
-            }
-
-            Console.WriteLine("Which planet are you starting on?\n"+"1.Earth " + " 2.Alpha Centour " + " 3.Pluto");
-            int Choic = int.Parse(Console.ReadLine());
-            if (Choic == 1)
-            { 
-            
-
-            }
-            else if (Choic == 2)
-            {
-
-            }
-            else if (Choic == 3)
-            {
-
-            }
-
-
-
-            Console.WriteLine("What resouce do you want to start with?\n"+"1.Money " + " 2.Animals " + " 3.Crops " + " 4.Jelwery");
-            int Choi = int.Parse(Console.ReadLine());
-            if (Choi == 1)
-            {
-
-            }
-            else if (Choi == 2)
-            {
-
-            }
-            else if (Choi == 3)
-            {
-
-            }
-            else if (Choi == 4)
-            {
-
-            }
-            Console.ResetColor();
-
+            StartGame testCharacter = new StartGame();
         }
 
         private void CompellingStory()
