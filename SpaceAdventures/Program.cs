@@ -11,9 +11,10 @@ namespace SpaceAdventures
         static void Main(string[] args)
         {
             new Character().Run();
-            new App().Run();
-            new Planets().Run();
+            //new App().Run();
             new Currency().Run();
+            new Planets().Run();
+
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SpaceAdventures
@@ -10,19 +11,36 @@ namespace SpaceAdventures
     {
         public void Run()
         {
-            Name();
-            CharacterFeatures();
+
+            StartGame();
             CompellingStory();
-            Console.Clear();
+            Name();
+            GenderType();
+            Currency();
 
         }
+
+
+        //Code that displays the start of the game
+        public void StartGame()
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("==============================================================================");
+            Console.WriteLine("        Welcome to the one and only Space Adventures.");
+            Console.WriteLine("==============================================================================");
+            Thread.Sleep(3000);
+            Console.ResetColor();
+        }
+
+        //Code to enter you name to start game
         public string Name()
         {
+            //Console.Clear();
             string name = "";
 
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("Type in your name to start the game: ");
+            Console.Write("\n\nType in your name to start the game: ");
             Console.ResetColor();
 
             name = ($"{Console.ReadLine()}");
@@ -30,71 +48,111 @@ namespace SpaceAdventures
 
         }
 
-
-
-        public void CharacterFeatures()
+        //code to choice your gender
+        public string GenderType()
         {
-            Console.WriteLine("\nEnter the appropriate numbers below.");
-            Console.ForegroundColor = ConsoleColor.White;
-
-            Console.WriteLine("\nAre you a" + " 1.Male " + " 2.Female");
-            int Choice = int.Parse(Console.ReadLine());
-            if (Choice == 1)
+            string Gender = "";
+            bool check = false;
+            while (check == false)
             {
+                Console.WriteLine("\nWhat is your gender?\n" + "1.Male " + " 2.Female ");
+                Gender = Console.ReadLine();
+                switch (Gender)
+                {
+                    case "1":
+                        Console.WriteLine("You selected Male.");
+                        check = true;
+                        break;
+                    case "2":
+                        Console.WriteLine("You selected Female.");
+                        check = true;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Selection");
+                        check = false;
+                        break;
+                }
 
             }
-            else if (Choice == 2)
-            {
-
-            }
-
-            Console.WriteLine("\nWhich planet are you starting on?\n" + "1.Earth " + " 2.Alpha Centouri:3 " + " 3.Pluto");
-            int Choic = int.Parse(Console.ReadLine());
-            if (Choic == 1)
-            {
-
-
-            }
-            else if (Choic == 2)
-            {
-
-            }
-            else if (Choic == 3)
-            {
-
-            }
-
-            Console.WriteLine("\nWhat resouce do you want to start with?\n" + "1.Money " + " 2.Animals " + " 3.Crops " + " 4.Jelwery");
-            int Choi = int.Parse(Console.ReadLine());
-            if (Choi == 1)
-            {
-                Console.Write("You are starting with Money");
-
-            }
-            else if (Choi == 2)
-            {
-
-            }
-            else if (Choi == 3)
-            {
-
-            }
-            else if (Choi == 4)
-            {
-
-            }
-            Console.ResetColor();
+            return Gender;
         }
 
+        //code to choice your Character and what resource they start with.
+        public string Currency()
+        {
+            string Curr = "";
+            bool check = false;
+            while (check == false)
+            {
+                Console.WriteLine("\nWhat resouce do you want to start with?\n" + "1.Money " + " 2.Jewlery " + " 3.Water " + " 4.Fuel " + " 5.Plant Seeds");
+                Curr = Console.ReadLine();
+                switch (Curr)
+                {
+                    case "1":
+                        Console.WriteLine("You selected Money.");
+                        check = true;
+                        break;
+                    case "2":
+                        Console.WriteLine("You selected Jewlery.");
+                        check = true;
+                        break;
+                    case "3":
+                        Console.WriteLine("You selected Water.");
+                        check = true;
+                        break;
+                    case "4":
+                        Console.WriteLine("You selected Fuel.");
+                        check = true;
+                        break;
+                    case "5":
+                        Console.WriteLine("You selected Plant Seeds.");
+                        check = true;
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid Selection");
+                        check = false;
+                        break;
+                }
+
+            }
+            return Curr;
+        }
+
+        //Code that talks about the Story of the game.
         public void CompellingStory()
         {
-            Console.WriteLine($"Your father was one of the best traders in the Galaxy." +
-                               "\nHe traded things from Animals to Crops and even Jewelry." +
-                                "\nBut sadly he was taken away from you when you were nine." +
-                               "\nNow that you are twenty you are the past eleven year but sadly she died of old age." +
-                               "\nNow that you are twenty you are going off to the follow in your fathers footsteps. " +
-                               "\nLets see if you have what it takes!\n");
+
+            Console.WriteLine("Krato following Galiath, His father legacy of remaining the God of Space." +
+                              "\nAfter suffering his fathers Death due to the age 70, krato knew this day was coming at the Age 20.\n");
+            // Console.ReadLine();
+            Thread.Sleep(2000);
+
+            Console.WriteLine("He now is  known as the God of Space. " +
+                             "\nThat will encounter difficult situations due to krato being the youngest ever to " +
+                               "become The God of Space.\n");
+            //Console.ReadLine();
+            Thread.Sleep(2000);
+            Console.WriteLine("His Mother Sonya was taken by his fathers #1 enemy Scar, to planet Liberia" +
+                                  " which is 500 Light years from Earth,\n");
+            //Console.ReadLine();
+            Thread.Sleep(2000);
+            Console.WriteLine("But due to the Space ship he has can only travel 50 light years.\n");
+            //Console.ReadLine();
+            Thread.Sleep(2000);
+            Console.WriteLine("Krato will have to travel from planet to planet , Trading Goods," +
+                                   "Gathering the amount of money he needs to buy a Better Space Ship.\n");
+            //Console.ReadLine();
+            Thread.Sleep(2000);
+            Console.WriteLine("When he reaches planet Liberia he will have to make," +
+                                  "The biggest decison of his life, to Trade it all" +
+                                  ",Give up his fathers legacy to Scar by handing him the" +
+                                  " Crown, passed down to him in order to get his mother back");
+            //Console.ReadLine();
+            Thread.Sleep(2000);
+
         }
+
         public void StarterGemstone()
         {
         }
