@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpaceAdventures
 {
-    class INTRO
+    class Intro
     {
         static string CharacterName;
 
@@ -49,7 +49,8 @@ namespace SpaceAdventures
             }
             static void GameTitle()
             {
-                string Title = @"______    _ _ _               _____ _    _           
+                string Title = @"
+______    _ _ _               _____ _    _           
 |  ___|  | | (_)             /  ___| |  (_)          
 | |_ __ _| | |_ _ __   __ _  \ `--.| | ___  ___  ___ 
 |  _/ _` | | | | '_ \ / _` |  `--. \ |/ / |/ _ \/ __|
