@@ -125,7 +125,20 @@ namespace SpaceAdventures
             double b = (-11 / 3.0);
             double c = (10 - warp);
             double velocity = (Math.Pow(warp, a)) + (Math.Pow(c, b));
+            double distance = (velocity * (0.0079944795459028918 * 1.0));
+            double Nibiru = (distance * 500);
+            double Risa = (distance * 79);
+            double Vulcan = (distance * 16);
+            double AlphaCentouri = (distance * 4.37);
+            double year = (Nibiru / 365);
+
             Console.WriteLine($"\nWarp speed equals {velocity} m/s.");
+            Console.WriteLine($"\nTravling 1 light year will take roughly {distance}:F3 days.");
+            Console.WriteLine($"\nTravling to Nibiru l will take roughly {Nibiru} days or {year} years.");
+            Console.WriteLine($"\nTravling to Risa  will take roughly {Risa} days.");
+            Console.WriteLine($"\nTravling to Vulcan  will take roughly {Vulcan} days.");
+            Console.WriteLine($"\nTravling to Alpha Centouri 3 will take roughly {AlphaCentouri} days.");
+
             return velocity;
             //1 light year eqauk
         }
