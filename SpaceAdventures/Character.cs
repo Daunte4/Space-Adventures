@@ -12,7 +12,7 @@ namespace SpaceAdventures
         public void Run()
         {
 
-            StartGame();
+            //StartGame();
             CompellingStory();
             Name();
             GenderType();

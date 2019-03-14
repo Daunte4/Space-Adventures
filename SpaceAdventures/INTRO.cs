@@ -8,20 +8,17 @@ namespace SpaceAdventures
 {
     class INTRO
     {
+        static string CharacterName;
+
         public void Run()
         {
+            GameTitle();
+            //NameCharacter();
+            //Choice();
         }
-          public static class Game
-        {
 
-            static string CharacterName;
 
-            public static void StartGame()
-            {
-                GameTitle();
-                NameCharacter();
-                Choice();
-            }
+      
             static void Choice()
             {
                 string input = "";
@@ -104,21 +101,10 @@ namespace SpaceAdventures
                 Console.Clear();
             }
         }
-        class Item
-        {
 
-        }
-        class Program
-        {
-            static void Main()
-            {
-                Game.StartGame();
-                Console.Read();
-            }
-
-        }
+       
     }
 
-}
+
     
 
