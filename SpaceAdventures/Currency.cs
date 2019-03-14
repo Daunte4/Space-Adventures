@@ -64,31 +64,36 @@ namespace SpaceAdventures
 
     }
 }
-/*
-public class Metals // get a base modifier of 2
-{
-    Creds metalCredits = new Creds();
-    public void Platinium() // will have a modifier of 3
-    {
-        Console.WriteLine("One of the better metals available, not as rare as palladium, though better for different projects." +
-            "The base modifier for platinium 3");
-        int metalModifier = 3;
-        metalCredits.MetalCreds(metalModifier);
-    }
 
-    public void Palladium() // will have a modifier of 4
-    {
-        int metalModifier = 4;
-        metalCredits.MetalCreds(metalModifier);
-    }
 
-    public void Titanium()
-    {
-        int metalModifier = 2;
-        metalCredits.MetalCreds(metalModifier);
-    }
-}
-/*
 
-}
+
+//*
+
+//public class Metals // get a base modifier of 2
+//{
+//    Creds metalCredits = new Creds();
+//    public void Platinium() // will have a modifier of 3
+//    {
+//        Console.WriteLine("One of the better metals available, not as rare as palladium, though better for different projects." +
+//            "The base modifier for platinium 3");
+//        int metalModifier = 3;
+//        metalCredits.MetalCreds(metalModifier);
+//    }
+
+//    public void Palladium() // will have a modifier of 4
+//    {
+//        int metalModifier = 4;
+//        metalCredits.MetalCreds(metalModifier);
+//    }
+
+//    public void Titanium()
+//    {
+//        int metalModifier = 2;
+//        metalCredits.MetalCreds(metalModifier);
+//    }
+//}
+
+
+
 
