@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace SpaceAdventures
 {
-    class Currency
+   public class Currency
     {
+        public void Run()
+        {
+        }
+
+        int crate = 100;
+       
+      
+
+
     }
 }

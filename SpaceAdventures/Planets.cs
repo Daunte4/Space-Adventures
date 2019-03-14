@@ -8,6 +8,10 @@ namespace SpaceAdventures
 {
     class Planets
     {
+        public void Run()
+        {
+
+        }
         public class Earth
         {
 

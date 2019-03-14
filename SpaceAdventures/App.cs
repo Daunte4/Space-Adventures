@@ -11,31 +11,13 @@ namespace SpaceAdventures
         public void Run()
         {
 
-            StartGame();
-            Name();
-            CharacterFeatures();
-            Console.Clear();
+  
 
             CompellingStory();
 
         }
-        
-        private void CharacterFeatures()
-        {
-            Character testCharacter = new Character();
-        }
 
-        private void Name()
-        {
-            Character testCharacter = new Character();
-        }
-
-        private void StartGame()
-        {
-            StartGame testCharacter = new StartGame();
-        }
-
-        private void CompellingStory()
+        public void CompellingStory()
         {
             Console.WriteLine($"Your father was one of the best traders in the Galaxy." +
                 " He traded things from Animals to Crops and even Jelwery. But sadly he was taken" +

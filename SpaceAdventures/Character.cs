@@ -8,7 +8,15 @@ namespace SpaceAdventures
 {
     class Character
     {
-        private string Name()
+        public void Run()
+        {
+            Name();
+            CharacterFeatures();
+            CompellingStory();
+            Console.Clear();
+
+        }
+        public string Name()
         {
             string name = "";
 
@@ -22,7 +30,9 @@ namespace SpaceAdventures
 
         }
 
-        private void CharacterFeatures()
+
+
+        public void CharacterFeatures()
         {
             Console.WriteLine("\nEnter the appropriate numbers below.");
             Console.ForegroundColor = ConsoleColor.White;
@@ -76,7 +86,7 @@ namespace SpaceAdventures
             Console.ResetColor();
         }
 
-        private void CompellingStory()
+        public void CompellingStory()
         {
             Console.WriteLine($"Your father was one of the best traders in the Galaxy." +
                                "\nHe traded things from Animals to Crops and even Jewelry." +
@@ -84,6 +94,14 @@ namespace SpaceAdventures
                                "\nNow that you are twenty you are the past eleven year but sadly she died of old age." +
                                "\nNow that you are twenty you are going off to the follow in your fathers footsteps. " +
                                "\nLets see if you have what it takes!\n");
+        }
+        public void StarterGemstone()
+        {
+        }
+
+        public void CharacterAge()
+        {
+
         }
     }
 }
