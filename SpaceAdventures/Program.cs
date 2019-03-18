@@ -10,8 +10,8 @@ namespace SpaceAdventures
     {
         static void Main(string[] args)
         {
-            //new Intro().Run();
-           // new Character().Run();
+            new Intro().Run();
+            new Character().Run();
             new Planets().Run();
             //new Currency().Run();
             //fixed
