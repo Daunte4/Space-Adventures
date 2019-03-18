@@ -14,7 +14,7 @@ namespace SpaceAdventures
            // new Character().Run();
             new Planets().Run();
             //new Currency().Run();
-
+            //fixed
         }
     }
 }
