@@ -11,12 +11,44 @@ namespace SpaceAdventures
     {
         public void Run()
         {
-
-            //StartGame();
-            CompellingStory();
+            //CompellingStory();
             Name();
+            StartLocation();
             GenderType();
             Currency();
+        }
+
+        //Code that talks about the Story of the game.
+        public void CompellingStory()
+        {
+
+            Console.WriteLine("Krato following Galiath, His father legacy of remaining the God of Space." +
+                              "\nAfter suffering his fathers Death due to the age 70, krato knew this day was coming at the Age 20.\n");
+            // Console.ReadLine();
+            Thread.Sleep(3000);
+
+            Console.WriteLine("He now is  known as the God of Space. " +
+                             "\nThat will encounter difficult situations due to krato being the youngest ever to " +
+                               "become The God of Space.\n");
+            //Console.ReadLine();
+            Thread.Sleep(3000);
+            Console.WriteLine("His Mother Sonya was taken by his fathers #1 enemy Scar, to planet Liberia" +
+                                  " which is 500 Light years from Earth,\n");
+            //Console.ReadLine();
+            Thread.Sleep(3000);
+            Console.WriteLine("But due to the Space ship he has can only travel 50 light years.\n");
+            //Console.ReadLine();
+            Thread.Sleep(3000);
+            Console.WriteLine("Krato will have to travel from planet to planet , Trading Goods," +
+                                   "Gathering the amount of money he needs to buy a Better Space Ship.\n");
+            //Console.ReadLine();
+            Thread.Sleep(3000);
+            Console.WriteLine("When he reaches planet Liberia he will have to make," +
+                                  "The biggest decison of his life, to Trade it all" +
+                                  ",Give up his fathers legacy to Scar by handing him the" +
+                                  " Crown, passed down to him in order to get his mother back");
+            //Console.ReadLine();
+            Thread.Sleep(3000);
 
         }
 
@@ -25,15 +57,41 @@ namespace SpaceAdventures
         {
             //Console.Clear();
             string name = "";
+            bool check = false;
+            while (check == false)
 
+            {
+                Console.WriteLine("Select from the options below.\n" + "1.Enter Name " + " 2. Quit");
+                name = Console.ReadLine();
+                switch (name)
+                {
+                    case "1":
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("\n\nType in your name to start the game: ");
+                        Console.ResetColor();
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("\n\nType in your name to start the game: ");
-            Console.ResetColor();
+                        name = ($"{Console.ReadLine()}");
 
-            name = ($"{Console.ReadLine()}");
+                        check = true;
+                        break;
+                    case "2":
+                        Console.WriteLine("Thanks for playing.");
+                        check = true;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Selection");
+                        check = false;
+                        break;
+                }
+
+            }
             return name;
+        }
 
+
+        public void StartLocation()
+        {
+            Console.WriteLine("\nYou are starting at the planet earth.\n");
         }
 
         //code to choice your gender
@@ -43,7 +101,7 @@ namespace SpaceAdventures
             bool check = false;
             while (check == false)
             {
-                Console.WriteLine("\nWhat is your gender?\n" + "1.Male " + " 2.Female ");
+                Console.WriteLine("\nWhat is your gender?\n" + "1.Male " + " 2.Female " + " 3. Quit");
                 Gender = Console.ReadLine();
                 switch (Gender)
                 {
@@ -53,6 +111,10 @@ namespace SpaceAdventures
                         break;
                     case "2":
                         Console.WriteLine("You selected Female.");
+                        check = true;
+                        break;
+                    case "3":
+                        Console.WriteLine("Thanks for playing.");
                         check = true;
                         break;
                     default:
@@ -106,48 +168,25 @@ namespace SpaceAdventures
             }
             return Curr;
         }
+        /*
+        public int money = 0;
+        public Ship ship;
+        public XY_and_Location location;
 
-        //Code that talks about the Story of the game.
-        public void CompellingStory()
+        public Character(XY_and_Location location)
         {
-
-            Console.WriteLine("Krato following Galiath, His father legacy of remaining the God of Space." +
-                              "\nAfter suffering his fathers Death due to the age 70, krato knew this day was coming at the Age 20.\n");
-            // Console.ReadLine();
-            Thread.Sleep(2000);
-
-            Console.WriteLine("He now is  known as the God of Space. " +
-                             "\nThat will encounter difficult situations due to krato being the youngest ever to " +
-                               "become The God of Space.\n");
-            //Console.ReadLine();
-            Thread.Sleep(2000);
-            Console.WriteLine("His Mother Sonya was taken by his fathers #1 enemy Scar, to planet Liberia" +
-                                  " which is 500 Light years from Earth,\n");
-            //Console.ReadLine();
-            Thread.Sleep(2000);
-            Console.WriteLine("But due to the Space ship he has can only travel 50 light years.\n");
-            //Console.ReadLine();
-            Thread.Sleep(2000);
-            Console.WriteLine("Krato will have to travel from planet to planet , Trading Goods," +
-                                   "Gathering the amount of money he needs to buy a Better Space Ship.\n");
-            //Console.ReadLine();
-            Thread.Sleep(2000);
-            Console.WriteLine("When he reaches planet Liberia he will have to make," +
-                                  "The biggest decison of his life, to Trade it all" +
-                                  ",Give up his fathers legacy to Scar by handing him the" +
-                                  " Crown, passed down to him in order to get his mother back");
-            //Console.ReadLine();
-            Thread.Sleep(2000);
-
+            this.ship = new Ship();
+            this.location = location;
         }
 
-        public void StarterMaterial()
+        public Character()
         {
         }
 
-        public void CharacterAge()
+        public void TravelTo(XY_and_Location location)
         {
-
+            this.location = location;
         }
+        */
     }
 }

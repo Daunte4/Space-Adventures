@@ -8,7 +8,11 @@ namespace SpaceAdventures
 {
     class XY_and_Location
     {
-
+        public void Run()
+        {
+            //WarpEquation();
+            // Coords;
+        }
         public double WarpEquation()
         {
             double warp = 5;
@@ -31,7 +35,8 @@ namespace SpaceAdventures
             Console.WriteLine($"\nTravling to Alpha Centouri 3 will take roughly {AlphaCentouri:F2} days.");
             return velocity;
         }
-        private static void PythagorasTheorem()
+        /*
+        public static void PythagorasTheorem()
         {
             double h, p, b, sqh;
 
@@ -53,6 +58,7 @@ namespace SpaceAdventures
             Console.WriteLine("Hypotenius is {0}", h);
 
         }
+        */
         internal struct Coords
         {
             int x;
@@ -71,5 +77,13 @@ namespace SpaceAdventures
                 return Math.Sqrt(xSqrtDist + ySqrtDist);
             }
         }
+      
     }
 }
+/*
+earth location(0, 0)
+Alpha Centuria(3.09006,3.09006)
+Vulcan(11.31371,11.31371)
+Risa(55.86144, 55.86144)
+Nibiru(353.55339, 353.55339)
+*/

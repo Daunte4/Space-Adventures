@@ -11,6 +11,7 @@ namespace SpaceAdventures
 
         public void Run()
         {
+            Console.Clear();
             PlanetInfomaton();
             TravelToAPlanet();
         }
@@ -37,22 +38,13 @@ namespace SpaceAdventures
                 case 2:
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"\nNibiru is 1 light-years from earth and their currency is Clothes." +
-                        $"\nTraveling to Nibiru is 1 light year away and will take 365 days.");
-                    Console.ResetColor();
-                    PlanetInfomaton();
-                    break;
-
-                case 3:
-                    Console.Clear();
-                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"\nAlpha Centouri: 3 is 4.37 light-years from the Earth and their currency is Jewlery." +
                         $"\nTravling to Alpha Centouri 3 will take roughly 7.47 days.");
                     Console.ResetColor();
                     PlanetInfomaton();
                     break;
 
-                case 4:
+                case 3:
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("\nVulcan is 16 light-years from Earth and their currency is Water." +
@@ -62,7 +54,7 @@ namespace SpaceAdventures
                     break;
 
 
-                case 5:
+                case 4:
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("\nRisa is 79 light-years from Earth and their currency is Fuel." +
@@ -71,7 +63,7 @@ namespace SpaceAdventures
                     PlanetInfomaton();
                     break;
 
-                case 6:
+                case 5:
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("\nLiberia is 500 light-years from Earth and their currency is Animals." +
@@ -79,7 +71,7 @@ namespace SpaceAdventures
                     Console.ResetColor();
                     PlanetInfomaton();
                     break;
-                case 7:
+                case 6:
                     TravelToAPlanet();
                     break;
 
@@ -89,6 +81,7 @@ namespace SpaceAdventures
             // Console.WriteLine("The equation for warp speed is v(W) = W((10/3)+u(W−9)∙A∙(−loge(10−W))n ");
             //Console.WriteLine("Were do you want to travel to?");
         }
+
 
         public void TravelToAPlanet()
         {
@@ -106,35 +99,34 @@ namespace SpaceAdventures
 
                 case 2:
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Nibiru is 1 light-years from Earth and their currency is clothes.");
+                    //Console.WriteLine("Nibiru is 1 light-years from Earth and their currency is clothes.");
                     Console.ResetColor();
                     break;
 
                 case 3:
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Alpha Centouri: 3 is 4.37 light-years from the Earth and their currency is Jewlery.");
+                   // Console.WriteLine("Alpha Centouri: 3 is 4.37 light-years from the Earth and their currency is Jewlery.");
                     Console.ResetColor();
                     break;
 
                 case 4:
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Vulcan is 16 light-years from Earth and their currency is Water.");
+                    //Console.WriteLine("Vulcan is 16 light-years from Earth and their currency is Water.");
                     Console.ResetColor();
                     break;
 
                 case 5:
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Risa is 79 light-years from Earth and their currency is Fuel.");
+                   // Console.WriteLine("Risa is 79 light-years from Earth and their currency is Fuel.");
                     Console.ResetColor();
                     break;
 
                 case 6:
+                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Liberia is 500 light-years from Earth and their currency is Animals");
+                    PlanetInfomaton();
                     break;
                 case 7:
-                    Console.Clear();
-                    PlanetInfomaton();
                     break;
 
             }

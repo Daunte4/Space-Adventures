@@ -8,13 +8,10 @@ namespace SpaceAdventures
 {
     class Intro
     {
-        static string CharacterName;
 
         public void Run()
         {
             GameTitle();
-            //NameCharacter();
-            //Choice();
         }
 
 
@@ -61,14 +58,14 @@ ______    _ _ _               _____ _    _
 
 
 
-            Console.Title = Title;
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine(Title);
-            Console.ResetColor();
-            //Console.WriteLine("Process Enter ");
-            //Console.ReadKey();
-            GamePicture();
-        }
+                Console.Title = Title;
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine(Title);
+                Console.ResetColor();
+                //Console.WriteLine("Process Enter ");
+                //Console.ReadKey();
+                GamePicture();
+            }
 
         static void GamePicture()
         {
