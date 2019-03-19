@@ -134,7 +134,7 @@ namespace SpaceAdventures
         }
 
         
-        public class Earth
+        class Earth
         {
             double distance = 0 + 0L;
             //distance from Earth(0) = Earth(0 days)
@@ -143,32 +143,32 @@ namespace SpaceAdventures
            
         }
 
-        public class AlphaCentouri
+        class AlphaCentouri
         {
             double distance = 0 + 4.4;
             //distance from Earth(0) = AlphaCentouri(1551 days)
         }
 
-        public class Vulcan
+        class Vulcan
         {
             double distance = 0 + 16L;
             //distance from Earth(0) = Vulcan(5840 days)
 
         }
 
-        public class Risa
+        class Risa
         {
             double distance = 0 + 79L;
             //distance from Earth(0) =  Risa(28835 days)
         }
 
-        public class Nibiru
+        class Nibiru
         {
-            double distance = 0 + 1L;
+            double distance = 0 + 1L;           
             //distance from Earth(0) = Nibiru(365 days)
         }
 
-        public class Liberia
+        class Liberia
         {
             double distance = 0 + 500L;
             //distance from Earth(0) = Liberia(182500 days)
