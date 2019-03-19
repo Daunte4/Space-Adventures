@@ -13,7 +13,7 @@ namespace SpaceAdventures
         {
             Console.Clear();
             PlanetInfomaton();
-            TravelToAPlanet();
+            //TravelToAPlanet();
         }
 
 
@@ -72,7 +72,7 @@ namespace SpaceAdventures
                     PlanetInfomaton();
                     break;
                 case 6:
-                    TravelToAPlanet();
+                    //TravelToAPlanet();
                     break;
 
             }
@@ -82,6 +82,7 @@ namespace SpaceAdventures
             //Console.WriteLine("Were do you want to travel to?");
         }
 
+        /*
 
         public void TravelToAPlanet()
         {
@@ -132,9 +133,9 @@ namespace SpaceAdventures
             }
 
         }
-
+        */
         
-        class Earth
+        /*class Earth
         {
             double distance = 0 + 0L;
             //distance from Earth(0) = Earth(0 days)
@@ -173,6 +174,7 @@ namespace SpaceAdventures
             double distance = 0 + 500L;
             //distance from Earth(0) = Liberia(182500 days)
         }
+        */
     
     }
 }

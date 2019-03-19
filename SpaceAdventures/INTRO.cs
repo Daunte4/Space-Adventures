@@ -14,36 +14,6 @@ namespace SpaceAdventures
             GameTitle();
         }
 
-
-
-        static void Choice()
-        {
-            string input = "";
-            Console.WriteLine("a: choose to Trade");
-            Console.WriteLine("");
-            Console.WriteLine("-------------");
-            Console.WriteLine("");
-            Console.WriteLine("b: choose to skip");
-            Console.WriteLine(CharacterName + " which choice will you choose? A or B?");
-            input = Console.ReadLine();
-            if (input.ToLower() == "a")
-            {
-                Console.WriteLine("You've chosen path A!");
-            }
-            else
-            {
-                Console.WriteLine("You've chosen path B!");
-            }
-        }
-        static void NameCharacter()
-        {
-            Console.WriteLine("What would you like your character's name to be?");
-            CharacterName = Console.ReadLine();
-            Console.WriteLine("");
-
-            Console.WriteLine("");
-            Console.WriteLine("Great! Your Character is now named " + CharacterName);
-        }
         static void GameTitle()
         {
             string Title = @"

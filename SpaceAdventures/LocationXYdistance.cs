@@ -8,6 +8,7 @@ using static SpaceAdventures.XY_and_Location;
 
 namespace SpaceAdventures
 {
+    /*
     class LocationXYdistance
     {
         public static double DistanceBetween(Coords a, Coords b)
@@ -50,4 +51,5 @@ namespace SpaceAdventures
 
 
     }
+    */
 }
