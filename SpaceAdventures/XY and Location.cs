@@ -20,11 +20,15 @@ namespace SpaceAdventures
             double b = (-11 / 3.0);
             double c = (10 - warp);
             double velocity = (Math.Pow(warp, a)) + (Math.Pow(c, b));
+
+
             double distance = (velocity * (0.0079945 * 1.0));
+
             double Nibiru = (distance * 500);
             double Risa = (distance * 79);
             double Vulcan = (distance * 16);
             double AlphaCentouri = (distance * 4.37);
+
             double year = (Nibiru / 365);
 
             Console.WriteLine($"\nWarp speed equals {velocity:F4} m/s.");

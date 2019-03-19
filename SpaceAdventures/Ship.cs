@@ -7,31 +7,50 @@ using System.Threading.Tasks;
 namespace SpaceAdventures
 {
     public class Ship
-
     {
-        /*
-        public Ship()
+        public void Run()
         {
-            name = "The Lady Grey";
-            description = "You're surrounded by screens. The controls are second nature to you. There's barely room behind you for a cot and a coffee maker.";
+            Console.Clear();
+            StartLocation();
+            ShipName();
+            ShipLocation();
 
-            options = new[] { "Disembark", "Plot a course" };
+
+        }
+        public void StartLocation()
+        {
+            Console.WriteLine("\nYou are starting at the planet earth.\n");
+        }
+        public void ShipName()
+        {
+            Console.WriteLine("\nYour ship is called: The Lady Grey");
         }
 
-        public override void HandleInput(Player hero, ConsoleKey key)
+        public void ShipLocation()
         {
-            switch (key)
+            string name = "";
+            //Console.Clear();
+            bool check = false;
+            while (check == false)
+
             {
-                case ConsoleKey.D1:
-                    Console.WriteLine("Disembarking...");
-                    Console.ReadLine();
-                    break;
-                case ConsoleKey.D2:
-                    Console.WriteLine("Plotting a course...");
-                    Console.ReadLine();
-                    break;
+                Console.WriteLine("\nSelect from the options below.\n" + "1. Disembarking " + " 2. Plotting a course");
+                name = Console.ReadLine();
+                switch (name)
+
+                {
+                    case "1":
+                        Console.WriteLine("Disembarking...");
+                        Console.ReadLine();
+                        break;
+                    case "2":
+                        Console.WriteLine("Plotting a course...");
+                        Console.ReadLine();
+                        break;
+                }
             }
+
+
         }
-        */
     }
 }

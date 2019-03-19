@@ -13,7 +13,6 @@ namespace SpaceAdventures
         {
             //CompellingStory();
             Name();
-            StartLocation();
             GenderType();
             Currency();
         }
@@ -88,11 +87,6 @@ namespace SpaceAdventures
             return name;
         }
 
-
-        public void StartLocation()
-        {
-            Console.WriteLine("\nYou are starting at the planet earth.\n");
-        }
 
         //code to choice your gender
         public string GenderType()
