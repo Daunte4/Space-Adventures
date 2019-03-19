@@ -20,18 +20,6 @@ namespace SpaceAdventures
 
         }
 
-
-        //Code that displays the start of the game
-        public void StartGame()
-        {
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("==============================================================================");
-            Console.WriteLine("        Welcome to the one and only Space Adventures.");
-            Console.WriteLine("==============================================================================");
-            Thread.Sleep(3000);
-            Console.ResetColor();
-        }
-
         //Code to enter you name to start game
         public string Name()
         {
@@ -153,7 +141,7 @@ namespace SpaceAdventures
 
         }
 
-        public void StarterGemstone()
+        public void StarterMaterial()
         {
         }
 
