@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SpaceAdventures
 {
-    class Character
+    public class Character
     {
         public void Run()
         {
