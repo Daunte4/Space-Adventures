@@ -12,6 +12,7 @@ namespace SpaceAdventures
         public void Run()
         {
             GameTitle();
+            Console.Clear();
             CompellingStory();
             Name();
             GenderType();
