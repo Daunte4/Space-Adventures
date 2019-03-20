@@ -162,25 +162,24 @@ namespace SpaceAdventures
             }
             return Curr;
         }
-        /*
-        public int money = 0;
-        public Ship ship;
-        public XY_and_Location location;
-
-        public Character(XY_and_Location location)
+        public static void EndMessage (Quit quit)
         {
-            this.ship = new Ship();
-            this.location = location;
-        }
+            Console.Clear();
+            switch(quit)
+            {
+                case Quit.UserQuit:
+                    Console.WriteLine("Say it ain't so. Please don't leave.\n\n");
+                    break;
+                case Quit.Age:
+                    Console.WriteLine("You have reached the age of 70 it's time to retire back home.\n\n");
+                    break;
+                case Quit.OutOfMoney:
+                    Console.WriteLine("Nooooo. Now you are broke. You better run they are looking for you.\n\n");
+                    break;
+                case Quit.DontQuit:
+                    throw new NotImplementedException("Shouldn't be quitting with DontQuit reason");
 
-        public Character()
-        {
+            }
         }
-
-        public void TravelTo(XY_and_Location location)
-        {
-            this.location = location;
-        }
-        */
     }
 }
