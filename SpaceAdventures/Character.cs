@@ -11,14 +11,66 @@ namespace SpaceAdventures
     {
         public void Run()
         {
-            //CompellingStory();
+            GameTitle();
+            CompellingStory();
             Name();
             GenderType();
             Currency();
         }
+        public static void GameTitle()
+        {
+            string Title = @"
+______    _ _ _               _____ _    _           
+|  ___|  | | (_)             /  ___| |  (_)          
+| |_ __ _| | |_ _ __   __ _  \ `--.| | ___  ___  ___ 
+|  _/ _` | | | | '_ \ / _` |  `--. \ |/ / |/ _ \/ __|
+| || (_| | | | | | | | (_| | /\__/ /   <| |  __/\__ \
+\_| \__,_|_|_|_|_| |_|\__, | \____/|_|\_\_|\___||___/
+                       __/ |                         
+                      |___/                          ";
 
-        //Code that talks about the Story of the game.
-        public void CompellingStory()
+
+
+            Console.Title = Title;
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(Title);
+            Console.ResetColor();
+            //Console.WriteLine("Process Enter ");
+            //Console.ReadKey();
+     
+            string GamePicture = @"                                                                                    
+                                                                       :::::::::                                                       
+                                                                 ******:::::::::******                                                           
+                                                                  *****:::::::::*****                                                         
+                                                                 ******:::::::::******                                                           
+                                                                    **:::::::::::**                                                              
+                                                                 ***::::*******::::***                                                           
+                                                                 *:::::*       *:::::*                                                           
+                                                                ///////         \\\\\\\                                                                                                                                                                         
+                                                              /:::::/             \:::::\                                                                                                                                  
+                                                          /:::::/                     \:::::\                                                                                                                                      
+                                                  /:::::/                                     \:::::\                                            
+                                                 ||||||| ||||||| ||||||| ||||||| ||||||| |||||||\|||||||                                                                                           
+                                                   ////////////////////||||||||||\\\\\\\\\\\\\\\\\\\\\\                                                                                                      
+                                                  //:::::/:::::/::::/:::::/   \:::::\:::::\:::::\::::\\                         
+                                                       \/:::::/:::::/::::/     \::::::\:::\::::\/                       
+                                                              \::::\::::/       \::::\::::/                      
+                               
+                                                                                                                  ";
+
+
+            Console.Title = GamePicture;
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(GamePicture);
+            Console.ResetColor();
+            Console.WriteLine("Process Enter ");
+            Console.ReadKey();
+            Console.Clear();
+        }
+    
+
+    //Code that talks about the Story of the game.
+    public void CompellingStory()
         {
 
             Console.WriteLine("Krato following Galiath, His father legacy of remaining the God of Space." +

@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="Character.cs" />
     <Compile Include="Currency.cs" />
-    <Compile Include="INTRO.cs" />
     <Compile Include="LocationXYdistance.cs" />
     <Compile Include="Planets.cs" />
     <Compile Include="Program.cs" />

@@ -12,13 +12,13 @@ namespace SpaceAdventures
         {
            // new Intro().Run();
 
-           // new Character().Run();
+           new Character().Run();
 
             //new Currency().Run();
 
             //new Planets().Run();
 
-            new XY_and_Location().Run();
+           // new XY_and_Location().Run();
 
             //new Ship().Run();
         }

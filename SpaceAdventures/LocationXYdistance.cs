@@ -14,12 +14,13 @@ namespace SpaceAdventures
         public string name;
         public string description;
 
-        double yPos;
-        double xPos;
+        //double yPos;
+        //double xPos;
 
-        decimal tradeRate;
+        //decimal tradeRate;
 
        // public List<Item> items;
+       /*
 
 public LocationXYdistance(string name, string description, double yPos, double xPos, List<Item> items, decimal tradeRate = 1.0M)
         {
@@ -30,11 +31,11 @@ public LocationXYdistance(string name, string description, double yPos, double x
             this.tradeRate = tradeRate;
             //this.item = item;
         }
+        */
 
+       // public double DistanceTo(LocationXYdistance destination) =>
 
-        public double DistanceTo(LocationXYdistance destination) =>
-
-             (Math.Sqrt(Math.Pow((destination.xPos - this.xPos), 2) + Math.Pow((destination.yPos - this.yPos), 2)));
+         //    (Math.Sqrt(Math.Pow((destination.xPos - this.xPos), 2) + Math.Pow((destination.yPos - this.yPos), 2)));
 
 
 
