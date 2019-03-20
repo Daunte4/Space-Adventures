@@ -10,15 +10,15 @@ namespace SpaceAdventures
     {
        public static void Main(string[] args)
         {
-           // new Intro().Run();
+            // new Intro().Run();
+            new Character().Run();
+          //  new MainRun().Run();
 
-           new Character().Run();
+   
 
-            //new Currency().Run();
+            new Planets().Run();
 
-            //new Planets().Run();
-
-           // new XY_and_Location().Run();
+            // new XY_and_Location().Run();
 
             //new Ship().Run();
         }

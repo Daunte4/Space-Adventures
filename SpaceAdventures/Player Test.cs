@@ -11,12 +11,12 @@ namespace SpaceAdventures
         public double age = 20;
         public decimal money;
 
-        public Location location;
+        public LocationXYdistance location;
         public List<Item> inventory = new List<Item>();
 
 
 
-        public Player(Location location)
+        public Player(LocationXYdistance location)
         {
             this.location = location;
             money = 1000M;
@@ -24,10 +24,10 @@ namespace SpaceAdventures
 
 
 
-        public void TravelTo(Location destination, double warp)
+        public void TravelTo(LocationXYdistance destination, double warp)
         {
             var distance = location.DistanceTo(destination);
-            var speed = Utility.WarpSpeedToLightSpeed(warp);
+            var speed = Utility.WarpToLight(warp);
 
             age += distance / speed;
 
