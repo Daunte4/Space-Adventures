@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpaceAdventures
 {
-    class Planets
+    public class Planets
     {
 
         public void Run()

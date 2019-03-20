@@ -20,7 +20,7 @@ namespace SpaceAdventures
 
         }
 
-        private void Results()
+        public void Results()
         {
             string Results = "";
             bool check = false;
@@ -74,7 +74,7 @@ namespace SpaceAdventures
             }
         }
 
-        private void Choices()
+        public void Choices()
         {
             string Choices = "";
             bool check = false;
