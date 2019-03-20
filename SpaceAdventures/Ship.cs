@@ -14,17 +14,26 @@ namespace SpaceAdventures
             StartLocation();
             ShipName();
             ShipLocation();
+            ShipStatus();
 
 
         }
         public void StartLocation()
         {
             Console.WriteLine("\nYou are starting at the planet earth.\n");
+            Console.Read();
         }
         public void ShipName()
         {
             Console.WriteLine("\nYour ship is called: The Lady Grey");
+            Console.Read();
         }
+        public void ShipStatus()
+        {
+            Console.WriteLine("\nYour ship that you started with can only travel 500 light years.\n");
+            Console.Read();
+        }
+
 
         public void ShipLocation()
         {

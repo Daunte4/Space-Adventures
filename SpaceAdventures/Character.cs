@@ -23,30 +23,30 @@ namespace SpaceAdventures
 
             Console.WriteLine("Krato following Galiath, His father legacy of remaining the God of Space." +
                               "\nAfter suffering his fathers Death due to the age 70, krato knew this day was coming at the Age 20.\n");
-            // Console.ReadLine();
+             Console.ReadLine();
             Thread.Sleep(3000);
 
             Console.WriteLine("He now is  known as the God of Space. " +
                              "\nThat will encounter difficult situations due to krato being the youngest ever to " +
                                "become The God of Space.\n");
-            //Console.ReadLine();
+            Console.ReadLine();
             Thread.Sleep(3000);
             Console.WriteLine("His Mother Sonya was taken by his fathers #1 enemy Scar, to planet Liberia" +
                                   " which is 500 Light years from Earth,\n");
-            //Console.ReadLine();
+            Console.ReadLine();
             Thread.Sleep(3000);
             Console.WriteLine("But due to the Space ship he has can only travel 50 light years.\n");
-            //Console.ReadLine();
+            Console.ReadLine();
             Thread.Sleep(3000);
             Console.WriteLine("Krato will have to travel from planet to planet , Trading Goods," +
                                    "Gathering the amount of money he needs to buy a Better Space Ship.\n");
-            //Console.ReadLine();
+            Console.ReadLine();
             Thread.Sleep(3000);
             Console.WriteLine("When he reaches planet Liberia he will have to make," +
                                   "The biggest decison of his life, to Trade it all" +
                                   ",Give up his fathers legacy to Scar by handing him the" +
                                   " Crown, passed down to him in order to get his mother back");
-            //Console.ReadLine();
+            Console.ReadLine();
             Thread.Sleep(3000);
 
         }
@@ -86,6 +86,7 @@ namespace SpaceAdventures
             }
             return name;
         }
+        
 
 
         //code to choice your gender

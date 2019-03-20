@@ -15,6 +15,106 @@ namespace SpaceAdventures
             Water();
             Fuel();
             PlantSeeds();
+            Choices();
+            Results();
+
+        }
+
+        private void Results()
+        {
+            string Results = "";
+            bool check = false;
+            while (check == false)
+            {
+               Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\nHow many credits do you want to trade?\n" + "\n 1. 200 Credits for 100$" +
+                   "\n 2. 250 credits for 100 pieces of Jewlry" +
+                    "\n 3. 100 credits for 100 bottles of water"+
+                   "\n 4. 150 credits for the value of 100 pounds of Fuel" +
+                   "\n 5. 125 credits for the value of 100 packets of plant seeds");
+                Results = Console.ReadLine();
+                switch (Results)
+                {
+                    case "1":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("You selected 200 credits for 100$");
+                        check = true;
+                        break;
+
+                    case "2":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("you selected 250 credits for 100 pieces of jewlry");
+                        check = true;                      
+                        break;
+
+                    case "3":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("you selected 100 credits for bottles of water");
+                        check = true;                        
+                        break;
+
+                    case "4":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("you selected 150 credits for 100 pounds of fuel");
+                        check = true;                       
+                        break;
+
+                    case "5":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("you selected 125 credits for 100 packets of plant seeds");
+                        check = true;                       
+                        break;
+
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("invalid Selection");
+                        check = false;
+                        break;
+                }
+            }
+        }
+
+        private void Choices()
+        {
+            string Choices = "";
+            bool check = false;
+            while(check == false)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\nWhat choice will you make?\n" + "\n 1.Trade a Certain amount of Credit for Money" + 
+                    "\n 2.Deny Trade and leave plant" + "3.quit");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Choices = Console.ReadLine();
+                switch (Choices)
+                {
+                    case "1":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("You selected to Trade.");
+                        check = true;
+                        break;
+
+                    case "2":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("You selected to Deny the Trade");
+                        check = true;
+                        Console.WriteLine("You have to either find another offer to Trade or you will be stuck on this planet");
+                        check = true;
+                        break;
+
+                    case "3":
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("you selected to Quit");
+                        check = true;
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("invalid Selection");
+                        check = false;
+                        break;
+                }
+
+
+            }
         }
 
         int Box = 100;
@@ -26,6 +126,7 @@ namespace SpaceAdventures
             MoneyOption = MoneyOption * money;
             Console.WriteLine($"\n{MoneyOption} credits for the valuse of 100 dollars.");
             return MoneyOption;
+
         }
         public double Jewlery()
         {
@@ -59,9 +160,7 @@ namespace SpaceAdventures
             Console.WriteLine($"\n{PlantOption} credits for the valuse of 100 packets of Plant Seeds.");
             return PlantOption;
         }
-
-
-
+        
     }
 }
 

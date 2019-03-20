@@ -8,6 +8,8 @@ namespace SpaceAdventures
 {
     class Intro
     {
+        string CharacterName;
+       
 
         public void Run()
         {
@@ -37,7 +39,7 @@ ______    _ _ _               _____ _    _
                 GamePicture();
             }
 
-        static void GamePicture()
+        void GamePicture()
         {
             string GamePicture = @"                                                                                    
                                                                        :::::::::                                                       
