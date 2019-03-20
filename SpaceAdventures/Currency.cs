@@ -10,11 +10,6 @@ namespace SpaceAdventures
     {
         public void Run()
         {
-            Money();
-            Jewlery();
-            Water();
-            Fuel();
-            PlantSeeds();
             Choices();
             Results();
 
@@ -27,41 +22,39 @@ namespace SpaceAdventures
             while (check == false)
             {
                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\nHow many credits do you want to trade?\n" + "\n 1. 200 Credits for 100$" +
-                   "\n 2. 250 credits for 100 pieces of Jewlry" +
-                    "\n 3. 100 credits for 100 bottles of water"+
-                   "\n 4. 150 credits for the value of 100 pounds of Fuel" +
-                   "\n 5. 125 credits for the value of 100 packets of plant seeds");
+                Console.WriteLine("\nHow much will you want to spend if you only have 1000$?" + "\n 1. Buy jewlry " +
+                    "\n 2. Buy fuel" + "\n 3. Buy water" + "\n 4. buy Plant seeds" + "\n 5. Animals ");
+                   
                 Results = Console.ReadLine();
                 switch (Results)
                 {
                     case "1":
                         Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine("You selected 200 credits for 100$");
+                        Console.WriteLine("You selected Jewlry to Buy");
                         check = true;
                         break;
 
                     case "2":
                         Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine("you selected 250 credits for 100 pieces of jewlry");
+                        Console.WriteLine("you selected Fuel to Buy");
                         check = true;                      
                         break;
 
                     case "3":
                         Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine("you selected 100 credits for bottles of water");
+                        Console.WriteLine("you selected water to Buy");
                         check = true;                        
                         break;
 
                     case "4":
                         Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine("you selected 150 credits for 100 pounds of fuel");
+                        Console.WriteLine("you selected plant seeds to Buy");
                         check = true;                       
                         break;
 
                     case "5":
                         Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine("you selected 125 credits for 100 packets of plant seeds");
+                        Console.WriteLine("you selected Animals to Buy");
                         check = true;                       
                         break;
 
@@ -81,7 +74,7 @@ namespace SpaceAdventures
             while(check == false)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\nWhat choice will you make?\n" + "\n 1.Trade a Certain amount of Credit for Money" + 
+                Console.WriteLine("\nWhat choice will you make?\n" + "\n 1. Trade current item you puchased for another currency" + 
                     "\n 2.Deny Trade and leave plant" + "3.quit");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Choices = Console.ReadLine();
@@ -117,49 +110,8 @@ namespace SpaceAdventures
             }
         }
 
-        int Box = 100;
-
-        public double Money()
-        {
-            double MoneyOption = 1;
-            double money = Box * 2;
-            MoneyOption = MoneyOption * money;
-            Console.WriteLine($"\n{MoneyOption} credits for the valuse of 100 dollars.");
-            return MoneyOption;
-
-        }
-        public double Jewlery()
-        {
-            double JewleryOption = 1;
-            double jewlery = Box * 2.5;
-            JewleryOption = JewleryOption * jewlery;
-            Console.WriteLine($"\n{JewleryOption} credits for the valuse of 100 pieces of Jewlery.");
-            return JewleryOption;
-        }
-        public double Water()
-        {
-            double WaterOption = 1;
-            double water = Box * 1;
-            WaterOption = WaterOption * water;
-            Console.WriteLine($"\n{WaterOption} credits for the valuse of 100 bottles of Water.");
-            return WaterOption;
-        }
-        public double Fuel()
-        {
-            double FuelOption = 1;
-            double fuel = Box * 1.5;
-            FuelOption = FuelOption * fuel;
-            Console.WriteLine($"\n{FuelOption} credits for the valuse of 100 pounds of Fuel.");
-            return FuelOption;
-        }
-        public double PlantSeeds()
-        {
-            double PlantOption = 1;
-            double Plant = Box * 1.25;
-            PlantOption = PlantOption * Plant;
-            Console.WriteLine($"\n{PlantOption} credits for the valuse of 100 packets of Plant Seeds.");
-            return PlantOption;
-        }
+       
+        
         
     }
 }
