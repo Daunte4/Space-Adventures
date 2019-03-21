@@ -4,23 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.IO;
 
 namespace SpaceAdventures
 {
-    public  class Character
+    public static class Intro
     {
-        public  void Run()
-      {
-            GameTitle();
-
-            StartGame();
- 
-            GenderType();
-
-            CompellingStory();
-        } 
-        public static void GameTitle()
+        public static void Display()
         {
             string Title = @"
 ______    _ _ _               _____ _    _           
@@ -38,13 +27,7 @@ ______    _ _ _               _____ _    _
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine(Title);
             Console.ResetColor();
-
-
-
-
-               // Console.Clear();
-
-            }
+        }
         public static string StartGame()
         {
             //Console.Clear();
@@ -68,6 +51,7 @@ ______    _ _ _               _____ _    _
                         break;
                     case "2":
                         Console.WriteLine("Thanks for playing.");
+
                         check = true;
                         break;
                     default:
@@ -79,7 +63,7 @@ ______    _ _ _               _____ _    _
             }
             return name;
         }
-        public static  string GenderType()
+        public static string GenderType()
         {
             string Gender = "";
             bool check = false;
@@ -112,36 +96,34 @@ ______    _ _ _               _____ _    _
             }
             return Gender;
         }
-
         public static void CompellingStory()
         {
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            // string prompt = "Press any key to continue...";
+
+            Console.Clear();
             Console.Clear();
             Console.WriteLine("Krato following Galiath, His father legacy of remaining the God of Space." +
                               "\nAfter suffering his fathers Death due to the age 70, krato knew this day was coming at the Age 20.\n");
-            Console.ReadLine();
-            Thread.Sleep(300);
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
+
+            Thread.Sleep(3000);
+
             Console.WriteLine("He now is  known as the God of Space. " +
                              "\nThat will encounter difficult situations due to krato being the youngest ever to " +
                                "become The God of Space.\n");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.ReadLine();
-            Thread.Sleep(300);
+
+            Thread.Sleep(3000);
             Console.WriteLine("His Mother Sonya was taken by his fathers #1 enemy Scar, to planet Liberia" +
                                   " which is 500 Light years from Earth,\n");
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.ReadLine();
+
             Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("But due to the Space ship he has can only travel 50 light years.\n");
-            Console.ReadLine();
+
             Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("Krato will have to travel from planet to planet , Trading Goods," +
                                    "Gathering the amount of money he needs to buy a Better Space Ship.\n");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.ReadLine();
+
             Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("When he reaches planet Liberia he will have to make," +
@@ -149,15 +131,15 @@ ______    _ _ _               _____ _    _
                                   ",Give up his fathers legacy to Scar by handing him the" +
                                   " Crown, passed down to him in order to get his mother back");
             Console.ReadLine();
-            Thread.Sleep(3000);
-  
+            Thread.Sleep(5000);
 
         }
 
-        public static void EndMessage (Quit quit)
+        public static void ClosingMessage(Quit quitReason)
         {
             Console.Clear();
-            switch(quit)
+
+            switch (quitReason)
             {
                 case Quit.UserQuit:
                     Console.WriteLine("Say it ain't so. Please don't leave.\n\n");
@@ -170,7 +152,6 @@ ______    _ _ _               _____ _    _
                     break;
                 case Quit.DontQuit:
                     throw new NotImplementedException("Shouldn't be quitting with DontQuit reason");
-
             }
         }
     }

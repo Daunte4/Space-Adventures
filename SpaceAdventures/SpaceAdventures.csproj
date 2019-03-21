@@ -44,17 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App Example.cs" />
-    <Compile Include="Character.cs" />
-    <Compile Include="Currency.cs" />
-    <Compile Include="Item Test.cs" />
-    <Compile Include="LocationXYdistance.cs" />
+    <Compile Include="Characters.cs" />
+    <Compile Include="Intro.cs" />
+    <Compile Include="Location And Claculation.cs" />
+    <Compile Include="Main Class.cs" />
     <Compile Include="Planets.cs" />
-    <Compile Include="Player Test.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quit.cs" />
-    <Compile Include="Utility.cs" />
+    <Compile Include="us.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

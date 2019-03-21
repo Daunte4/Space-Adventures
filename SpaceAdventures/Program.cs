@@ -10,17 +10,14 @@ namespace SpaceAdventures
     {
        public static void Main(string[] args)
         {
-            // new Intro().Run();
-            new Character().Run();
-          //  new MainRun().Run();
+            Intro.Display();
+            Intro.StartGame();
+            Intro.GenderType();
+            //Story.CompellingStory();
 
-   
+            Planet.PlanetInfomaton();
 
-            new Planets().Run();
-
-            // new XY_and_Location().Run();
-
-            //new Ship().Run();
+            new Main_Class().Run();
         }
     }
 }
