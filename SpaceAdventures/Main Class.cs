@@ -12,7 +12,6 @@ namespace SpaceAdventures
             //this code will help run the program
             public void Run()
             {
-                //Travel();
                 var quitReason = EventLoop();
 
                 Intro.ClosingMessage(quitReason);
@@ -27,7 +26,7 @@ namespace SpaceAdventures
                 var Seeds = new Item_Cost("One pack of Seeds", 1.2M);
                 var Jewels = new Item_Cost("One small bag of Jewels", 3.4M);
                 var Spices = new Item_Cost("One pack of Spices", 1000.88M);
-                var Rice = new Item_Cost("One pack of Rice", 1000.88M);
+                var Rice = new Item_Cost("One pack of Rice", 500M);
                 var Shoes = new Item_Cost("One pack of Shoes", 1000.88M);
 
 
@@ -70,10 +69,12 @@ namespace SpaceAdventures
                 {
                     Console.Clear();
 
-                    //Print the current location
-                    Console.WriteLine($"Location_Destination: {Traveler.location.name}  Age: {Traveler.age:F2} years    Credits: {Traveler.money:F2}\n");
-                    /* {Traveler.location.name} */
-                    Travel();
+                //Print the current locationConsole.WriteLine
+                Console.WriteLine("================================================================================================================");
+                Console.WriteLine($"Location Destination: {Traveler.location.name}  Current Age: {Traveler.AddedAge:F2} years old    Current Currency: {Traveler.money:F2}");
+                    Console.WriteLine("================================================================================================================");
+                /* {Traveler.location.name} */
+                Travel();
                     // Print a description of that location
                     //  Console.WriteLine(Traveler.location.description);
 
@@ -103,8 +104,10 @@ namespace SpaceAdventures
                     do
                     {
                         Console.Clear();
-                        Console.WriteLine($"Location_Destination: {Traveler.location.name}  Age: {Traveler.age:F2} years    Credits: {Traveler.money:F2}\n");
-                        Console.WriteLine("Select from the options below.\n" + "\n1.Travel to other locations " + "\n2.Disimbarck your current location" + "\n3.Return to planet infomation" + "\n4.Quit");
+                    Console.WriteLine("================================================================================================================");
+                    Console.WriteLine($"Location Destination: {Traveler.location.name}  Current Age: {Traveler.AddedAge:F2} years old    Current Currency: {Traveler.money:F2}");
+                    Console.WriteLine("================================================================================================================");
+                    Console.WriteLine("\nSelect from the options below.\n" + "\n1.Travel to other locations " + "\n2.Disimbarck your current location" + "\n3.Return to planet infomation" + "\n4.Quit");
                         int choice = int.Parse(Console.ReadLine());
                         switch (choice)
 
@@ -132,7 +135,7 @@ namespace SpaceAdventures
             public void Disembark()
             {
                 Console.Clear();
-                Console.WriteLine($"Location_Destination: {Traveler.location.name}  Age: {Traveler.age:F2} years    Credits: {Traveler.money:F2}\n");
+                Console.WriteLine($"Location_Destination: {Traveler.location.name}  Age: {Traveler.AddedAge:F2} years    Credits: {Traveler.money:F2}\n");
 
                 bool check = false;
                 while (check == false)
@@ -205,7 +208,7 @@ namespace SpaceAdventures
 
         public Quit ShouldQuit(Quit quitReason)
             {
-                Quit AgeCheck() => Traveler.age >= 70 ? Quit.Age : Quit.DontQuit;
+                Quit AgeCheck() => Traveler.AddedAge >= 70 ? Quit.Age : Quit.DontQuit;
                 Quit MoneyCheck() => Traveler.money < 0 ? Quit.OutOfMoney : Quit.DontQuit;
 
 
@@ -303,8 +306,8 @@ namespace SpaceAdventures
                         case ConsoleKey.RightArrow:
                         case ConsoleKey.Enter:
                             done = true;
-                            var warpSpeed = 5;
-                            Traveler.TravelTo(locations[selector], warpSpeed);
+                            //var warpSpeed = 5;
+                            Traveler.TravelTo(locations[selector]);
                             break;
                     }
                 } while (!done);

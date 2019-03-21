@@ -149,7 +149,7 @@ ______    _ _ _               _____ _    _
                     Console.WriteLine("Say it ain't so. Please don't leave.\n\n");
                     break;
                 case Quit.Age:
-                    Console.WriteLine("You have reached the age of 70 it's time to retire back home.\n\n");
+                    Console.WriteLine("You have reached the AddedAge of 70 it's time to retire back home.\n\n");
                     break;
                 case Quit.OutOfMoney:
                     Console.WriteLine("Nooooo. Now you are broke. You better run they are looking for you.\n\n");

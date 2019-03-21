@@ -9,17 +9,18 @@ namespace SpaceAdventures
     public class Characters
     {
         
-            public double age = 20;
-            public decimal money;
-
-            public Location_Destination location;
 
 
-            public List<Item_Cost> inventory = new List<Item_Cost>();
+        public Location_Destination location;
 
 
+       public List<Item_Cost> inventory = new List<Item_Cost>();
 
-            public Characters(Location_Destination location)
+
+        public double AddedAge = 20;
+        public decimal money;
+
+        public Characters(Location_Destination location)
             {
                 this.location = location;
                 money = 1000M;
@@ -27,14 +28,15 @@ namespace SpaceAdventures
 
 
 
-            public void TravelTo(Location_Destination destination, double warp)
+            public void TravelTo(Location_Destination destination)
             {
-                var distance = location.DistanceTo(destination);
-                var speed = WarpMathEquation.WarpToLight(warp);
+                var LightYears = location.DistanceTo(destination);
+                var velocity = WarpMathEquation.WarpToLight();
 
-                age += distance / speed;
+                AddedAge += LightYears / velocity;
+            
 
-                location = destination;
+            location = destination;
             }
 
 
