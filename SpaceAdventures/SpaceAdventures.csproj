@@ -51,6 +51,7 @@
     <Compile Include="Planets.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Travel_options.cs" />
     <Compile Include="us.cs" />
   </ItemGroup>
   <ItemGroup>

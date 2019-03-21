@@ -24,34 +24,38 @@ namespace SpaceAdventures
 
             public  Main_Class()
             {
-                var beer = new Item("Space Beer", 1.2M);
-                var honey = new Item("Space Honey", 3.4M);
-                var illegalArms = new Item("Illegal Arms", 1000.88M);
-                //earth
+                var Seeds = new Item("One pack of Seeds", 1.2M);
+                var Jewels = new Item("One small bag of Jewels", 3.4M);
+                var Spices = new Item("One pack of Spices", 1000.88M);
+                var Rice = new Item("One pack of Rice", 1000.88M);
+                var Shoes = new Item("One pack of Shoes", 1000.88M);
+
+
+
+
+
+
+            //earth
+            locations.Add(
+                    new Location("Earth", 0, 0, new List<Item>() { Spices, Jewels }));
+
+            
+            //Alpha Centauri 3
                 locations.Add(
-                    new Location("Earth", 0, 0, new List<Item>() { beer, illegalArms }));
-                //Alpha Centauri 3
+                    new Location("Alpha Centauri 3", 3.09006, 3.09006, new List<Item>() { Spices, Seeds }, (decimal).5));
+            
+            //Vulcan
                 locations.Add(
-                    new Location("Alpha Centauri 3", 3.09006, 3.09006, new List<Item>() { honey }, (decimal).5));
-                //Vulcan
+                    new Location("Vulcan", 11.31371, 11.31371, new List<Item>() { Rice, Shoes, Seeds }, (decimal)1.6));
+
+            //Risa
                 locations.Add(
-                    new Location("Vulcan",
-                                 11.31371, 11.31371,
-                                 new List<Item>() { honey, illegalArms, beer },
-                                 (decimal)1.6));
-                //Risa
-                locations.Add(
-                 new Location("Risa",
-                              55.86144, 55.86144,
-                              new List<Item>() { honey, illegalArms, beer },
-                              (decimal)2.35));
+                 new Location("Risa", 55.86144, 55.86144, new List<Item>() { Jewels, Shoes, Rice }, (decimal)2.35));
+
 
                 //Nibiru
                 locations.Add(
-                 new Location("Nibiru",
-                              353.55339, 353.55339,
-                              new List<Item>() { honey, illegalArms, beer },
-                              (decimal)11.31371));
+                 new Location("Nibiru", 353.55339, 353.55339, new List<Item>() { Shoes, Jewels, Seeds }, (decimal)11.31371));
 
                 Traveler = new Characters(locations[0]);
             }
@@ -100,7 +104,7 @@ namespace SpaceAdventures
                     {
                         Console.Clear();
                         Console.WriteLine($"Location: {Traveler.location.name}  Age: {Traveler.age:F2} years    Credits: {Traveler.money:F2}\n");
-                        Console.WriteLine("Select from the options below.\n" + "\n1.Travel to other locations " + "\n2.Disimbarck your current location" + "\n3.Return to planet infomation" + "\n4. Quit");
+                        Console.WriteLine("Select from the options below.\n" + "\n1.Travel to other locations " + "\n2.Disimbarck your current location" + "\n3.Return to planet infomation" + "\n4.Quit");
                         int choice = int.Parse(Console.ReadLine());
                         switch (choice)
 
@@ -161,45 +165,45 @@ namespace SpaceAdventures
 
 
 
-            /*
+        /*
 
-            private void PrintOptionListtt()
+        private void PrintOptionListtt()
+        {
+            Console.WriteLine();
+            Console.WriteLine("1. Travel to other locations");
+            Console.WriteLine("2. Buy items");
+            Console.WriteLine("3. Sell items");
+            Console.WriteLine("q. Quit");
+        }
+
+        private Quit HandleInputttt(ConsoleKey key)
+        {
+            switch (key)
             {
-                Console.WriteLine();
-                Console.WriteLine("1. Travel to other locations");
-                Console.WriteLine("2. Buy items");
-                Console.WriteLine("3. Sell items");
-                Console.WriteLine("q. Quit");
+                case ConsoleKey.Q:
+                    return Quit.UserQuit;
+                case ConsoleKey.D1:
+                    TravelMenu();
+                    break;
+                case ConsoleKey.D2:
+                    BuyMenu();
+                    break;
+                case ConsoleKey.D3:
+                    SellMenu();
+                    break;
             }
 
-            private Quit HandleInputttt(ConsoleKey key)
-            {
-                switch (key)
-                {
-                    case ConsoleKey.Q:
-                        return Quit.UserQuit;
-                    case ConsoleKey.D1:
-                        TravelMenu();
-                        break;
-                    case ConsoleKey.D2:
-                        BuyMenu();
-                        break;
-                    case ConsoleKey.D3:
-                        SellMenu();
-                        break;
-                }
+            return Quit.DontQuit;
+        }
 
-                return Quit.DontQuit;
-            }
-
-        */
+    */
 
 
 
 
 
 
-            private Quit ShouldQuit(Quit quitReason)
+        public Quit ShouldQuit(Quit quitReason)
             {
                 Quit AgeCheck() => Traveler.age >= 70 ? Quit.Age : Quit.DontQuit;
                 Quit MoneyCheck() => Traveler.money < 0 ? Quit.OutOfMoney : Quit.DontQuit;
@@ -218,7 +222,7 @@ namespace SpaceAdventures
                 return quitReason;
             }
 
-            private void SellMenu()
+        public void SellMenu()
             {
                 Console.Clear();
 
@@ -240,7 +244,7 @@ namespace SpaceAdventures
                 }
             }
 
-            private void BuyMenu()
+        public void BuyMenu()
             {
                 Console.Clear();
 
@@ -256,18 +260,18 @@ namespace SpaceAdventures
                 }
             }
 
-            private void PrintItems(List<Item> items)
+        public void PrintItems(List<Item> items)
             {
                 for (int i = 0; i < items.Count; ++i)
                 {
                     var item = items[i];
                     var cost = Traveler.location.CostOf(item);
 
-                    Console.WriteLine($"{i + 1}. {item.name} - {cost:f2}cr");
+                    Console.WriteLine($"{i + 1}. {item.name} - {cost:F2}cr");
                 }
             }
 
-            private void TravelMenu()
+        public void TravelMenu()
             {
                 var done = false;
                 int selector = 0;
@@ -306,7 +310,7 @@ namespace SpaceAdventures
                 } while (!done);
             }
 
-            private void PrintLocationsAndDistances(int selector)
+        public void PrintLocationsAndDistances(int selector)
             {
                 for (int i = 0; i < locations.Count; ++i)
                 {
