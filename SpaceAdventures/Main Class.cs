@@ -113,7 +113,7 @@ namespace SpaceAdventures
                                 TravelMenu();
                                 break;
                             case 2:
-                                Dismbarck();
+                                Disembark();
                                 break;
                             case 3:
                                 Planet.PlanetInfomaton();
@@ -129,7 +129,7 @@ namespace SpaceAdventures
 
 
 
-            public void Dismbarck()
+            public void Disembark()
             {
                 Console.Clear();
                 Console.WriteLine($"Location_Destination: {Traveler.location.name}  Age: {Traveler.age:F2} years    Credits: {Traveler.money:F2}\n");

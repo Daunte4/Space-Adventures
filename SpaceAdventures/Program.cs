@@ -13,7 +13,7 @@ namespace SpaceAdventures
             Intro.Display();
             Intro.StartGame();
             Intro.GenderType();
-            //Story.CompellingStory();
+            Intro.CompellingStory();
 
             Planet.PlanetInfomaton();
 
