@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace SpaceAdventures
 {
-    public class Location
+
+    public class Item_Cost
+    {
+        public string name;
+
+        public decimal cost;
+
+        public Item_Cost(string name, decimal cost)
+        {
+            this.name = name;
+            this.cost = cost;
+        }
+    }
+
+    public class Location_Destination
     {
 
         public string name;
@@ -14,43 +28,32 @@ namespace SpaceAdventures
         double X;
         double Y;
 
-        decimal tradeRate;
+        decimal TradeCost;
 
-        public List<Item> items;
+        public List<Item_Cost> ItemsToTrade;
 
-        public Location(string name, double X, double Y, List<Item> items, decimal tradeRate = 1.0M)
+        public Location_Destination(string name, double X, double Y, List<Item_Cost> ItemsToTrade, decimal TradeCost = 1.0M)
         {
             this.name = name;
             this.X = X;
             this.Y = Y;
-            this.tradeRate = tradeRate;
-            this.items = items;
+            this.TradeCost = TradeCost;
+            this.ItemsToTrade = ItemsToTrade;
 
         }
 
-        public double DistanceTo(Location destination) =>
+        public double DistanceTo(Location_Destination LocDestination) =>
 
-             (Math.Sqrt(Math.Pow((destination.X - this.X), 2) + Math.Pow((destination.Y - this.Y), 2)));
-
-
+             (Math.Sqrt(Math.Pow((LocDestination.X - this.X), 2) + Math.Pow((LocDestination.Y - this.Y), 2)));
 
 
-        public decimal CostOf(Item item) => item.cost * tradeRate;
+
+
+        public decimal CostOf(Item_Cost item) => item.cost * TradeCost;
     }
-    public class Item
-    {
-        public string name;
-        public decimal cost;
+  
 
-        public Item(string name, decimal cost)
-        {
-            this.name = name;
-            this.cost = cost;
-        }
-    }
-
-
-    public static class MathEquation
+    public static class WarpMathEquation
     {
         public static double WarpToLight(double warp) //WarpToLight
         {

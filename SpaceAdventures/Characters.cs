@@ -12,34 +12,42 @@ namespace SpaceAdventures
             public double age = 20;
             public decimal money;
 
-            public Location location;
-            public List<Item> inventory = new List<Item>();
+            public Location_Destination location;
+
+
+            public List<Item_Cost> inventory = new List<Item_Cost>();
 
 
 
-            public Characters(Location location)
+            public Characters(Location_Destination location)
             {
                 this.location = location;
                 money = 1000M;
             }
 
-            public void TravelTo(Location destination, double warp)
+
+
+            public void TravelTo(Location_Destination destination, double warp)
             {
                 var distance = location.DistanceTo(destination);
-                var speed = MathEquation.WarpToLight(warp);
+                var speed = WarpMathEquation.WarpToLight(warp);
 
                 age += distance / speed;
 
                 location = destination;
             }
 
-            public void BuyItem(Item item)
+
+
+            public void BuyItem(Item_Cost item)
             {
                 money -= location.CostOf(item);
                 inventory.Add(item);
             }
 
-            public void SellItem(Item item)
+
+
+            public void SellItem(Item_Cost item)
             {
                 money += location.CostOf(item);
                 inventory.Remove(item);

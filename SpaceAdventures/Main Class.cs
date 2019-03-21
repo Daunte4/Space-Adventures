@@ -18,17 +18,17 @@ namespace SpaceAdventures
                 Intro.ClosingMessage(quitReason);
             }
 
-            List<Location> locations = new List<Location>();
+            List<Location_Destination> locations = new List<Location_Destination>();
 
         Characters Traveler;
 
             public  Main_Class()
             {
-                var Seeds = new Item("One pack of Seeds", 1.2M);
-                var Jewels = new Item("One small bag of Jewels", 3.4M);
-                var Spices = new Item("One pack of Spices", 1000.88M);
-                var Rice = new Item("One pack of Rice", 1000.88M);
-                var Shoes = new Item("One pack of Shoes", 1000.88M);
+                var Seeds = new Item_Cost("One pack of Seeds", 1.2M);
+                var Jewels = new Item_Cost("One small bag of Jewels", 3.4M);
+                var Spices = new Item_Cost("One pack of Spices", 1000.88M);
+                var Rice = new Item_Cost("One pack of Rice", 1000.88M);
+                var Shoes = new Item_Cost("One pack of Shoes", 1000.88M);
 
 
 
@@ -37,25 +37,25 @@ namespace SpaceAdventures
 
             //earth
             locations.Add(
-                    new Location("Earth", 0, 0, new List<Item>() { Spices, Jewels }));
+                    new Location_Destination("Earth", 0, 0, new List<Item_Cost>() { Spices, Jewels }));
 
             
             //Alpha Centauri 3
                 locations.Add(
-                    new Location("Alpha Centauri 3", 3.09006, 3.09006, new List<Item>() { Spices, Seeds }, (decimal).5));
+                    new Location_Destination("Alpha Centauri 3", 3.09006, 3.09006, new List<Item_Cost>() { Spices, Seeds }, (decimal).5));
             
             //Vulcan
                 locations.Add(
-                    new Location("Vulcan", 11.31371, 11.31371, new List<Item>() { Rice, Shoes, Seeds }, (decimal)1.6));
+                    new Location_Destination("Vulcan", 11.31371, 11.31371, new List<Item_Cost>() { Rice, Shoes, Seeds }, (decimal)1.6));
 
             //Risa
                 locations.Add(
-                 new Location("Risa", 55.86144, 55.86144, new List<Item>() { Jewels, Shoes, Rice }, (decimal)2.35));
+                 new Location_Destination("Risa", 55.86144, 55.86144, new List<Item_Cost>() { Jewels, Shoes, Rice }, (decimal)2.35));
 
 
                 //Nibiru
                 locations.Add(
-                 new Location("Nibiru", 353.55339, 353.55339, new List<Item>() { Shoes, Jewels, Seeds }, (decimal)11.31371));
+                 new Location_Destination("Nibiru", 353.55339, 353.55339, new List<Item_Cost>() { Shoes, Jewels, Seeds }, (decimal)11.31371));
 
                 Traveler = new Characters(locations[0]);
             }
@@ -71,7 +71,7 @@ namespace SpaceAdventures
                     Console.Clear();
 
                     //Print the current location
-                    Console.WriteLine($"Location: {Traveler.location.name}  Age: {Traveler.age:F2} years    Credits: {Traveler.money:F2}\n");
+                    Console.WriteLine($"Location_Destination: {Traveler.location.name}  Age: {Traveler.age:F2} years    Credits: {Traveler.money:F2}\n");
                     /* {Traveler.location.name} */
                     Travel();
                     // Print a description of that location
@@ -103,7 +103,7 @@ namespace SpaceAdventures
                     do
                     {
                         Console.Clear();
-                        Console.WriteLine($"Location: {Traveler.location.name}  Age: {Traveler.age:F2} years    Credits: {Traveler.money:F2}\n");
+                        Console.WriteLine($"Location_Destination: {Traveler.location.name}  Age: {Traveler.age:F2} years    Credits: {Traveler.money:F2}\n");
                         Console.WriteLine("Select from the options below.\n" + "\n1.Travel to other locations " + "\n2.Disimbarck your current location" + "\n3.Return to planet infomation" + "\n4.Quit");
                         int choice = int.Parse(Console.ReadLine());
                         switch (choice)
@@ -132,7 +132,7 @@ namespace SpaceAdventures
             public void Dismbarck()
             {
                 Console.Clear();
-                Console.WriteLine($"Location: {Traveler.location.name}  Age: {Traveler.age:F2} years    Credits: {Traveler.money:F2}\n");
+                Console.WriteLine($"Location_Destination: {Traveler.location.name}  Age: {Traveler.age:F2} years    Credits: {Traveler.money:F2}\n");
 
                 bool check = false;
                 while (check == false)
@@ -248,7 +248,7 @@ namespace SpaceAdventures
             {
                 Console.Clear();
 
-                List<Item> items = Traveler.location.items;
+                List<Item_Cost> items = Traveler.location.ItemsToTrade;
 
                 PrintItems(items);
 
@@ -260,7 +260,7 @@ namespace SpaceAdventures
                 }
             }
 
-        public void PrintItems(List<Item> items)
+        public void PrintItems(List<Item_Cost> items)
             {
                 for (int i = 0; i < items.Count; ++i)
                 {
@@ -314,7 +314,7 @@ namespace SpaceAdventures
             {
                 for (int i = 0; i < locations.Count; ++i)
                 {
-                    Location destination = locations[i];
+                    Location_Destination destination = locations[i];
 
                     var distance = Traveler.location.DistanceTo(destination);
 
