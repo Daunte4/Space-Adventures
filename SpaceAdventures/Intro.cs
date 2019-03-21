@@ -47,10 +47,10 @@ ______    _ _ _               _____ _    _
                 switch (name)
                 {
                     case "1":
-                        Console.Clear();
+                        //Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Thank you for wanting to play the game (^_^)");
-                        Console.Write("\n\nPlease type in your name to start the game: ");
+                        Console.WriteLine("\n    Thank you for wanting to play the game (^_^)");
+                        Console.Write("\n    Please type in your name to start the game: ");
                         Console.ResetColor();
 
                         name = ($"{Console.ReadLine()}");
@@ -78,7 +78,8 @@ ______    _ _ _               _____ _    _
             //
 //while (check == false)
             {
-                Console.WriteLine("\nWhat is your gender?\n" + "1.Male " + " 2.Female " + " 3. Quit");
+                Console.WriteLine("\n\t    What is your gender?\n" + "\t  1.Male " + " 2.Female " + " 3. Quit");
+                Console.Write("\t\tMy option is: ");
                 Gender = Console.ReadLine();
                 switch (Gender)
                 {
@@ -94,7 +95,7 @@ ______    _ _ _               _____ _    _
                         break;
                     case "3":
                         Console.WriteLine("Thanks for playing.");
-                        check = true;
+                        check = false;
                         break;
                     default:
                         Console.WriteLine("Invalid Selection");

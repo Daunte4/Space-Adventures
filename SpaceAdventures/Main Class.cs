@@ -108,7 +108,8 @@ namespace SpaceAdventures
                     Console.WriteLine($"Location Destination: {Traveler.location.name}  Current Age: {Traveler.AddedAge:F2} years old    Current Currency: {Traveler.money:F2}");
                     Console.WriteLine("=============================================================================================================");
                     Console.WriteLine("\nSelect from the options below.\n" + "\n1.Travel to other locations " + "\n2.Disimbarck your current location" + "\n3.Return to planet infomation" + "\n4.Quit");
-                        int choice = int.Parse(Console.ReadLine());
+                    Console.Write("\t\tMy option is: ");
+                    int choice = int.Parse(Console.ReadLine());
                         switch (choice)
 
                         {
@@ -146,7 +147,8 @@ namespace SpaceAdventures
                     do
                     {
                         Console.WriteLine("Select from the options below.\n" + "\n1. Retrun to ship " + "\n2. Buy items that you want" + "\n3. Sale items that you have" + "\n4. Quit");
-                        int choice = int.Parse(Console.ReadLine());
+                        Console.Write("\t\tMy option is: ");
+                    int choice = int.Parse(Console.ReadLine());
                         switch (choice)
 
                         {
@@ -294,14 +296,14 @@ namespace SpaceAdventures
 
                     switch (key)
                     {
-                        //case ConsoleKey.DownArrow:
-                        //    selector++;
-                        //    selector %= count;
-                        //    break;
-                        //case ConsoleKey.UpArrow:
-                        //    selector--;
-                        //    selector = (selector + count) % count;
-                        //    break;
+                        case ConsoleKey.DownArrow:
+                           selector++;
+                           selector %= count;
+                            break;
+                        case ConsoleKey.UpArrow:
+                            selector--;
+                           selector = (selector + count) % count;
+                            break;
                     case ConsoleKey.D1:
                        // TravelMenu();
                         break;
@@ -334,14 +336,14 @@ namespace SpaceAdventures
 
                     Console.Write($" 1 ");
 
-                  //  if (i == selector)
-                   //// {
-                    //    UI.Highlight();
-                   // }
+                    if (i == selector)
+                    {
+                        UI.Highlight();
+                    }
 
                     Console.WriteLine($"Location {destination.name}: Approximately {distance:F2} Light Years away.");
 
-                   // UI.ResetColors();
+                    UI.ResetColors();
                 }
             }
         }
