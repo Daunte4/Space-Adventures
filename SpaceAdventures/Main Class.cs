@@ -334,7 +334,7 @@ namespace SpaceAdventures
 
                     var distance = Traveler.location.DistanceTo(destination);
 
-                    Console.Write($" 1 ");
+                    Console.Write($" - ");
 
                     if (i == selector)
                     {
