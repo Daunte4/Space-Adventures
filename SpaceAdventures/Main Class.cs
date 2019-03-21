@@ -70,9 +70,9 @@ namespace SpaceAdventures
                     Console.Clear();
 
                 //Print the current locationConsole.WriteLine
-                Console.WriteLine("================================================================================================================");
+                Console.WriteLine("=============================================================================================================");
                 Console.WriteLine($"Location Destination: {Traveler.location.name}  Current Age: {Traveler.AddedAge:F2} years old    Current Currency: {Traveler.money:F2}");
-                    Console.WriteLine("================================================================================================================");
+                Console.WriteLine("=============================================================================================================");
                 /* {Traveler.location.name} */
                 Travel();
                     // Print a description of that location
@@ -104,9 +104,9 @@ namespace SpaceAdventures
                     do
                     {
                         Console.Clear();
-                    Console.WriteLine("================================================================================================================");
+                    Console.WriteLine("=============================================================================================================");
                     Console.WriteLine($"Location Destination: {Traveler.location.name}  Current Age: {Traveler.AddedAge:F2} years old    Current Currency: {Traveler.money:F2}");
-                    Console.WriteLine("================================================================================================================");
+                    Console.WriteLine("=============================================================================================================");
                     Console.WriteLine("\nSelect from the options below.\n" + "\n1.Travel to other locations " + "\n2.Disimbarck your current location" + "\n3.Return to planet infomation" + "\n4.Quit");
                         int choice = int.Parse(Console.ReadLine());
                         switch (choice)
@@ -135,9 +135,11 @@ namespace SpaceAdventures
             public void Disembark()
             {
                 Console.Clear();
-                Console.WriteLine($"Location_Destination: {Traveler.location.name}  Age: {Traveler.AddedAge:F2} years    Credits: {Traveler.money:F2}\n");
+            Console.WriteLine("=============================================================================================================");
+            Console.WriteLine($"Location_Destination: {Traveler.location.name}  Age: {Traveler.AddedAge:F2} years    Credits: {Traveler.money:F2}");
+            Console.WriteLine("=============================================================================================================");
 
-                bool check = false;
+            bool check = false;
                 while (check == false)
 
 
@@ -243,7 +245,7 @@ namespace SpaceAdventures
                 else
                 {
                     Console.WriteLine("Nothing to sell...");
-                    UI.ElicitInput("Press any key to continue...");
+                    Console.WriteLine("Press any key to continue...");
                 }
             }
 
@@ -283,7 +285,7 @@ namespace SpaceAdventures
                 do
                 {
                     Console.Clear();
-                    Console.WriteLine("Travel to:");
+                    Console.WriteLine("Select which Planet you would like to travel to:");
 
                     PrintLocationsAndDistances(selector);
 
@@ -292,14 +294,23 @@ namespace SpaceAdventures
 
                     switch (key)
                     {
-                        case ConsoleKey.DownArrow:
-                            selector++;
-                            selector %= count;
-                            break;
-                        case ConsoleKey.UpArrow:
-                            selector--;
-                            selector = (selector + count) % count;
-                            break;
+                        //case ConsoleKey.DownArrow:
+                        //    selector++;
+                        //    selector %= count;
+                        //    break;
+                        //case ConsoleKey.UpArrow:
+                        //    selector--;
+                        //    selector = (selector + count) % count;
+                        //    break;
+                    case ConsoleKey.D1:
+                       // TravelMenu();
+                        break;
+                    case ConsoleKey.D2:
+                        //BuyMenu();
+                        break;
+                    case ConsoleKey.D3:
+                       // SellMenu();
+                        break;
                         case ConsoleKey.Q:
                             done = true;
                             break;
@@ -321,16 +332,16 @@ namespace SpaceAdventures
 
                     var distance = Traveler.location.DistanceTo(destination);
 
-                    Console.Write($" - ");
+                    Console.Write($" 1 ");
 
-                    if (i == selector)
-                    {
-                        UI.Highlight();
-                    }
+                  //  if (i == selector)
+                   //// {
+                    //    UI.Highlight();
+                   // }
 
-                    Console.WriteLine($"{destination.name}: {distance:f2}ly");
+                    Console.WriteLine($"Location {destination.name}: Approximately {distance:F2} Light Years away.");
 
-                    UI.ResetColors();
+                   // UI.ResetColors();
                 }
             }
         }

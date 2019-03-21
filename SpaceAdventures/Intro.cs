@@ -12,6 +12,8 @@ namespace SpaceAdventures
         public static void Display()
         {
             string Title = @"
+======================================================
+
 ______    _ _ _               _____ _    _           
 |  ___|  | | (_)             /  ___| |  (_)          
 | |_ __ _| | |_ _ __   __ _  \ `--.| | ___  ___  ___ 
@@ -19,7 +21,10 @@ ______    _ _ _               _____ _    _
 | || (_| | | | | | | | (_| | /\__/ /   <| |  __/\__ \
 \_| \__,_|_|_|_|_| |_|\__, | \____/|_|\_\_|\___||___/
                        __/ |                         
-                      |___/                          ";
+                      |___/                    
+
+======================================================
+";
 
 
 
@@ -36,13 +41,16 @@ ______    _ _ _               _____ _    _
             while (check == false)
 
             {
-                Console.WriteLine("Select from the options below.\n" + "1.Start Game " + " 2. Quit");
+                Console.WriteLine("\tSelect from the options below.\n" + "\t   1.Start Game " + " 2. Quit");
+                Console.Write("\t\tMy option is: ");
                 name = Console.ReadLine();
                 switch (name)
                 {
                     case "1":
+                        Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write("\n\nType in your name to start the game: ");
+                        Console.WriteLine("Thank you for wanting to play the game (^_^)");
+                        Console.Write("\n\nPlease type in your name to start the game: ");
                         Console.ResetColor();
 
                         name = ($"{Console.ReadLine()}");
@@ -52,7 +60,7 @@ ______    _ _ _               _____ _    _
                     case "2":
                         Console.WriteLine("Thanks for playing.");
 
-                        check = true;
+                        check = false;
                         break;
                     default:
                         Console.WriteLine("Invalid Selection");
@@ -67,7 +75,8 @@ ______    _ _ _               _____ _    _
         {
             string Gender = "";
             bool check = false;
-            while (check == false)
+            //
+//while (check == false)
             {
                 Console.WriteLine("\nWhat is your gender?\n" + "1.Male " + " 2.Female " + " 3. Quit");
                 Gender = Console.ReadLine();
@@ -130,9 +139,12 @@ ______    _ _ _               _____ _    _
             Console.WriteLine("When he reaches planet Liberia he will have to make," +
                                   "The biggest decison of his life, to Trade it all" +
                                   ",Give up his fathers legacy to Scar by handing him the Crown" +
-                                  "\n passed down to him in order to get his mother back to Earth, or he will have to fight Scar");
-            Console.ReadLine();
+                                  "\npassed down to him in order to get his mother back to Earth, or he will have to fight Scar.");
             Thread.Sleep(500);
+
+            Console.WriteLine("\n\nPress any key to continue.");
+            Console.ReadLine();
+            
 
         }
 
