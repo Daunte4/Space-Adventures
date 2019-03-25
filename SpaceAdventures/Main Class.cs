@@ -171,24 +171,7 @@ namespace SpaceAdventures
 
 
 
-        public Quit ShouldQuit(Quit quitReason)
-            {
-                Quit AgeCheck() => Traveler.AddedAge >= 70 ? Quit.Age : Quit.DontQuit;
-                Quit MoneyCheck() => Traveler.money < 0 ? Quit.OutOfMoney : Quit.DontQuit;
-
-
-                if (quitReason == Quit.DontQuit)
-                {
-                    quitReason = AgeCheck();
-                }
-
-                if (quitReason == Quit.DontQuit)
-                {
-                    quitReason = MoneyCheck();
-                }
-
-                return quitReason;
-            }
+      
 
         public void SellMenu()
             {
