@@ -72,7 +72,7 @@ namespace SpaceAdventures
                         "\nShoes are less expensive on this planet because their not needed for the terrain on this planet" +
                         "\nJewels are expensive here because their used to melt down and create ships. " +
                         "\nSeeds are used to trade for the fuel for the ship or used to plant your crops" +
-                        "\nTravling to Liberia will take roughly 854.41 days or 2.3 years.");
+                        "\nTravling to nibiru will take roughly 854.41 days or 2.3 years.");
                     Console.ResetColor();
                     PlanetInfomaton();
                     break;
