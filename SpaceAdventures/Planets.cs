@@ -68,7 +68,7 @@ namespace SpaceAdventures
                 case 5:
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("\nLiberia is 500 light-years from Earth and their currency is Shoes, Jewels, Seeds." +
+                    Console.WriteLine("\nNibiru is 500 light-years from Earth and their currency is Shoes, Jewels, Seeds." +
                         "\nShoes are less expensive on this planet because their not needed for the terrain on this planet" +
                         "\nJewels are expensive here because their used to melt down and create ships. " +
                         "\nSeeds are used to trade for the fuel for the ship or used to plant your crops" +
