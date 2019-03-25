@@ -133,7 +133,7 @@ ______    _ _ _               _____ _    _
             Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("you will have to travel from planet to planet , Trading Goods," +
-                                   "Gathering the amount of money he needs to buy Fuel when needing to travel back to Earth.\n");
+                                   "Gathering the amount of money you needs to buy Fuel when needing to travel back to Earth.\n");
 
             Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.Cyan;
