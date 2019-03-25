@@ -137,10 +137,10 @@ ______    _ _ _               _____ _    _
 
             Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("When he reaches planet Liberia he will have to make," +
+            Console.WriteLine("When you reaches planet Liberia you will have to make," +
                                   "The biggest decison of his life, to Trade it all" +
-                                  ",Give up his fathers legacy to Scar by handing him the Crown" +
-                                  "\npassed down to him in order to get his mother back to Earth, or he will have to fight Scar.");
+                                  ",Give up your fathers legacy to Scar by handing him the Crown" +
+                                  "\nthat was passed down to you in order to get your mother back to Earth, or you will have to face Scar in battle.");
             Thread.Sleep(1000);
 
             Console.WriteLine("\n\nPress any key to continue.");
