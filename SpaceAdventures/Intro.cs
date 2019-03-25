@@ -108,34 +108,34 @@ ______    _ _ _               _____ _    _
         }
         public static void CompellingStory()
         {
-             string prompt = "Press any key to continue...";
+             
 
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("you are following Galiath, your father legacy of remaining the God of Space." +
                               "\nAfter suffering your fathers Death due to the age 70, you knew this day was coming at the Age 20.\n");
 
-            Thread.Sleep(4000);
+            Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("He now is  known as the God of Space. " +
                              "\nThat will encounter difficult situations due to being the youngest ever to " +
                                "become The God of Space.\n");
 
-            Thread.Sleep(4000);
+            Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("your Mother Sonya was taken by your fathers #1 enemy Scar, to planet Liberia" +
                                   " which is 500 Light years from Earth,\n");
 
-            Thread.Sleep(4000);
+            Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("But due to the Space ship you have can only travel 500 light years.\n");
 
-            Thread.Sleep(4000);
+            Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("you will have to travel from planet to planet , Trading Goods," +
                                    "Gathering the amount of money he needs to buy Fuel when needing to travel back to Earth.\n");
 
-            Thread.Sleep(4000);
+            Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("When he reaches planet Liberia he will have to make," +
                                   "The biggest decison of his life, to Trade it all" +

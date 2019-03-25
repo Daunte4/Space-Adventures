@@ -25,9 +25,9 @@ namespace SpaceAdventures
             {
                 var Seeds = new Item_Cost("One pack of Seeds", 1.2M);
                 var Jewels = new Item_Cost("One small bag of Jewels", 3.4M);
-                var Spices = new Item_Cost("One pack of Spices", 1000.88M);
+                var Spices = new Item_Cost("One pack of Spices", 750M);
                 var Rice = new Item_Cost("One pack of Rice", 500M);
-                var Shoes = new Item_Cost("One pack of Shoes", 1000.88M);
+                var Shoes = new Item_Cost("One pack of Shoes", 21M);
 
 
 
@@ -107,7 +107,7 @@ namespace SpaceAdventures
                     Console.WriteLine("=============================================================================================================");
                     Console.WriteLine($"Location Destination: {Traveler.location.name}  Current Age: {Traveler.AddedAge:F2} years old    Current Currency: {Traveler.money:F2}");
                     Console.WriteLine("=============================================================================================================");
-                    Console.WriteLine("\nSelect from the options below.\n" + "\n1.Travel to other locations " + "\n2.Disimbarck your current location" + "\n3.Return to planet infomation" + "\n4.Quit");
+                    Console.WriteLine("\nSelect from the options below.\n" + "\n1.Travel to other locations " + "\n2.Disembark your current location" + "\n3.Return to planet infomation" + "\n4.Quit");
                     Console.Write("\t\tMy option is: ");
                     int choice = int.Parse(Console.ReadLine());
                         switch (choice)
@@ -137,7 +137,7 @@ namespace SpaceAdventures
             {
                 Console.Clear();
             Console.WriteLine("=============================================================================================================");
-            Console.WriteLine($"Location_Destination: {Traveler.location.name}  Age: {Traveler.AddedAge:F2} years    Credits: {Traveler.money:F2}");
+            Console.WriteLine($"Location Destination: {Traveler.location.name}  Age: {Traveler.AddedAge:F2} years    Credits: {Traveler.money:F2}");
             Console.WriteLine("=============================================================================================================");
 
             bool check = false;
@@ -171,45 +171,6 @@ namespace SpaceAdventures
 
 
 
-
-        /*
-
-        private void PrintOptionListtt()
-        {
-            Console.WriteLine();
-            Console.WriteLine("1. Travel to other locations");
-            Console.WriteLine("2. Buy items");
-            Console.WriteLine("3. Sell items");
-            Console.WriteLine("q. Quit");
-        }
-
-        private Quit HandleInputttt(ConsoleKey key)
-        {
-            switch (key)
-            {
-                case ConsoleKey.Q:
-                    return Quit.UserQuit;
-                case ConsoleKey.D1:
-                    TravelMenu();
-                    break;
-                case ConsoleKey.D2:
-                    BuyMenu();
-                    break;
-                case ConsoleKey.D3:
-                    SellMenu();
-                    break;
-            }
-
-            return Quit.DontQuit;
-        }
-
-    */
-
-
-
-
-
-
         public Quit ShouldQuit(Quit quitReason)
             {
                 Quit AgeCheck() => Traveler.AddedAge >= 70 ? Quit.Age : Quit.DontQuit;
@@ -238,7 +199,7 @@ namespace SpaceAdventures
                     PrintItems(Traveler.inventory);
 
                     var itemIndex = UI.ElicitInput("Which item would you like to sell: ", 1, Traveler.inventory.Count);
-
+               // Console.Write("Option:");
                     if (!itemIndex.cancelled)
                     {
                         Traveler.SellItem(Traveler.inventory[itemIndex.input - 1]);
@@ -260,8 +221,9 @@ namespace SpaceAdventures
                 PrintItems(items);
 
                 var itemIndex = UI.ElicitInput("Which item would you like to buy: ", 1, items.Count);
+           // Console.Write("Option:");
 
-                if (!itemIndex.cancelled)
+            if (!itemIndex.cancelled)
                 {
                     Traveler.BuyItem(items[itemIndex.input - 1]);
                 }
@@ -274,7 +236,7 @@ namespace SpaceAdventures
                     var item = items[i];
                     var cost = Traveler.location.CostOf(item);
 
-                    Console.WriteLine($"{i + 1}. {item.name} - {cost:F2}cr");
+                    Console.WriteLine($"{i + 1}. {item.name} - {cost:F2} Coins");
                 }
             }
 
@@ -334,7 +296,7 @@ namespace SpaceAdventures
 
                     var distance = Traveler.location.DistanceTo(destination);
 
-                    Console.Write($" - ");
+                    //Console.Write($" - ");
 
                     if (i == selector)
                     {

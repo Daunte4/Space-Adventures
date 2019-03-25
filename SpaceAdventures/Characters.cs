@@ -23,7 +23,7 @@ namespace SpaceAdventures
         public Characters(Location_Destination location)
             {
                 this.location = location;
-                money = 1000M;
+                money = 10000M;
             }
 
 
