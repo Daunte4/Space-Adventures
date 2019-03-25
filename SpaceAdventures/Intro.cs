@@ -117,7 +117,7 @@ ______    _ _ _               _____ _    _
 
             Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("He now is  known as the God of Space. " +
+            Console.WriteLine("your now known as the God of Space. " +
                              "\nThat will encounter difficult situations due to being the youngest ever to " +
                                "become The God of Space.\n");
 
