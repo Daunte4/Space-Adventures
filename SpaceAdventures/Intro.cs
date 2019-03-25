@@ -123,7 +123,7 @@ ______    _ _ _               _____ _    _
 
             Thread.Sleep(3000);
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("your Mother Sonya was taken by your fathers #1 enemy Scar, to planet Liberia" +
+            Console.WriteLine("your Mother Sonya was taken by your fathers #1 enemy Scar, to planet Nibiru" +
                                   " which is 500 Light years from Earth,\n");
 
             Thread.Sleep(3000);
